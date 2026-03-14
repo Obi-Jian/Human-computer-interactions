@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 # --- Estrapolazione metadati ---
 from scipy.io import wavfile
 
-fs, x = wavfile.read('/Users/generalkenobi/LocalDocuments/interazioni/Materiale/chirp_signal.wav')
+fs, x = wavfile.read('./Materiale/chirp_signal.wav')
 # x = x.astype(np.float32) / np.iinfo(x.dtype).max
 
 print(f'Frequenza di campionamento: {fs} Hz')
