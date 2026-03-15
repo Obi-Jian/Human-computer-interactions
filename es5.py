@@ -26,8 +26,9 @@ data = data / np.max(np.abs(data)) # easy normalization step: we make everything
 
 def quantizza(segnale, n_bit, A_min=-1, A_max=1):
     livelli = 2 ** n_bit
-    delta = (A_max - A_min) / (livelli - 1)  # we also can do without the -1
-    y_quant = np.round(segnale / delta) * delta
+    delta = (A_max - A_min) / (livelli - 1)
+    segnale_clipped = np.clip(segnale, A_min, A_max)
+    y_quant = np.round((segnale_clipped - A_min) / delta) * delta + A_min
     return y_quant
 
 data8bit = quantizza(data, 8)
