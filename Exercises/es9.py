@@ -3,7 +3,7 @@ from scipy.signal import butter, filtfilt, find_peaks
 import numpy as np
 import matplotlib.pyplot as plt
 
-data = sio.loadmat('/Users/generalkenobi/LocalDocuments/Interazioni_(github)/Human-computer-interactions/Materiale/gsr_signal.mat')
+data = sio.loadmat('./Materiale/gsr_signal.mat')
 
 print(data.keys())
 

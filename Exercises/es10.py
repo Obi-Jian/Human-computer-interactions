@@ -62,6 +62,3 @@ disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=clf.classes_)
 disp.plot(cmap='Blues')
 plt.title('Matrice di Confusione')
 plt.show()
-
-
-
